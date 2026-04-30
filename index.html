@@ -82,6 +82,56 @@
     footer{background:#120318;color:white;padding:30px 0 18px}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:32px;align-items:center}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:86px;height:86px;object-fit:contain}.footer-brand .brand-title{font-size:32px}.contact-lines{display:grid;gap:12px;color:white}.contact-lines a{display:flex;gap:12px;align-items:center;color:white}.gold-text{color:var(--gold)}.footer-note{line-height:1.6;color:#f1e9f3}.socials{display:flex;gap:12px;margin-top:12px}.socials span{width:32px;height:32px;border-radius:50%;background:var(--gold);color:#1b0625;display:grid;place-items:center;font-weight:900}.copyright{border-top:1px solid rgba(215,169,63,.25);margin-top:24px;padding-top:15px;text-align:center;color:#d8cddd;font-size:13px}.copyright span{color:var(--gold)}
     @media(max-width:1040px){.links{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:120px}.hero-copy{padding-bottom:10px}.founders-hero{grid-template-columns:1fr 1fr}.hero-founder{min-height:430px}.service-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr}.cta-action{border-left:none;border-top:1px solid rgba(215,169,63,.4);padding-top:24px}.footer-grid{grid-template-columns:1fr}}
     @media(max-width:660px){.brand img{width:58px;height:58px}.brand-title{font-size:25px}.nav-cta{display:none}.hero{padding-top:105px}.founders-hero{grid-template-columns:1fr}.hero-founder{min-height:440px}.hero-founder.amber{min-height:420px}h1{font-size:43px}.hero-copy p{font-size:16px}.service-grid{grid-template-columns:1fr}.quote-inner{grid-template-columns:1fr}.quote-mark{display:none}.quote-text{font-size:24px}.about-copy{padding-left:0}.about-copy:before{display:none}.founder-mini-grid{grid-template-columns:1fr}.footer-brand img{width:70px;height:70px}}
+    .modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36,16,63,0.75);
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  background: #fbfaf7;
+  margin: 6% auto;
+  padding: 42px;
+  border-radius: 28px;
+  max-width: 780px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.35);
+  position: relative;
+  border: 1px solid #d4af37;
+}
+
+.modal-eyebrow {
+  color: #8a6d1f;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.modal-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  color: #24103f;
+}
+
+.modal-content p {
+  color: #5c536c;
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+.close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #24103f;
+}
   </style>
 </head>
 <body>
@@ -136,5 +186,42 @@
 
   <section class="cta-strip" id="contact"><div class="wrap cta-grid"><div><h2 class="cta-title">Ready to take the next step?</h2><p class="cta-lead">We’re here to support you on your journey to healing and wellness.</p></div><a class="cta-action" href="mailto:info@loganpathwaytohopeandhealing.org?subject=Request%20Services"><div><div class="round-icon">▣</div><span>Request Services</span></div></a><a class="cta-action" href="mailto:info@loganpathwaytohopeandhealing.org?subject=Referral"><div><div class="round-icon">▰</div><span>Send Referral</span></div></a><a class="cta-action" href="mailto:info@loganpathway.org"><div><div class="round-icon">☎</div><span>Contact Us</span></div></a></div></section>
   <footer><div class="wrap footer-grid"><div class="footer-brand"><img src="logo.png" alt="Logan Pathway logo"><div><div class="brand-title">Logan</div><span class="brand-sub">Pathway to Hope<br>and Healing</span></div></div><div class="contact-lines"><a href="mailto:info@loganpathwaytohopeandhealing.org"><span class="gold-text">✉</span> info@loganpathwaytohopeandhealing.org</a><a href="tel:9806807229"><span class="gold-text">☎</span> (980) 680-7229</a></div><div class="footer-note">Serving individuals, families, and our community with compassion and care.<div class="socials"><span>f</span><span>◎</span><span>in</span></div></div></div><div class="wrap copyright">© 2026 Logan Pathway to Hope & Healing &nbsp; | &nbsp; <span>Hope. Healing. Stability. Growth.</span></div></footer>
+  <div id="storyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeStoryModal()">&times;</span>
+
+    <p class="modal-eyebrow">OUR STORY</p>
+    <h2>Built from a calling to create something better.</h2>
+
+    <p>
+      Logan Pathway to Hope & Healing was created from a deep belief that youth and families deserve more than temporary solutions. They deserve a place where healing is intentional, support is consistent, and every person is treated with dignity.
+    </p>
+
+    <p>
+      Our work is rooted in compassion, structure, and hope. We understand that many youth and families come to services carrying trauma, stress, broken trust, and uncertainty. Our goal is to meet them with care, help them stabilize, and walk with them toward growth.
+    </p>
+
+    <p>
+      Whether through outpatient therapy, group counseling, assessments, residential support, or future program development, Logan Pathway exists to help people move from surviving to healing, and from healing to purpose.
+    </p>
+  </div>
+</div>
+
+<script>
+function openStoryModal() {
+  document.getElementById("storyModal").style.display = "block";
+}
+
+function closeStoryModal() {
+  document.getElementById("storyModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  let modal = document.getElementById("storyModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
