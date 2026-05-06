@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story | Logan Pathway to Hope & Healing</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'Inter', sans-serif;
+      background:#fbfaf7;
+      color:#24103f;
+      overflow-x:hidden;
+    }
+
+    a { text-decoration:none; }
+
+    nav {
+      background:#16051f;
+      padding:20px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid rgba(212,175,55,.28);
+    }
+
+    .logo img {
+      height:74px;
+      width:auto;
+      object-fit:contain;
+      display:block;
+    }
+
+    .nav-links {
+      display:flex;
+      gap:30px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      color:#fff;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.7px;
+    }
+
+    .nav-links a:hover { color:#d4af37; }
+
+    .contact-btn {
+      background:#d4af37;
+      color:#24103f !important;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:800;
+    }
+
+    .hero {
+      min-height:78vh;
+      padding:120px 7%;
+      display:flex;
+      align-items:center;
+      background:
+        radial-gradient(circle at 80% 25%, rgba(212,175,55,.18), transparent 28%),
+        linear-gradient(135deg,#16051f 0%, #24103f 45%, #4c1d95 100%);
+      color:white;
+      position:relative;
+    }
+
+    .hero::after {
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-1px;
+      height:90px;
+      background:#fbfaf7;
+      clip-path:polygon(0 45%, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .hero-content {
+      max-width:980px;
+      position:relative;
+      z-index:2;
+    }
+
+    .eyebrow {
+      color:#d4af37;
+      letter-spacing:3px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      margin-bottom:24px;
+    }
+
+    h1 {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(58px, 8vw, 112px);
+      line-height:.92;
+      font-weight:600;
+      margin-bottom:32px;
+    }
+
+    .hero-sub {
+      max-width:720px;
+      color:#f3eefc;
+      font-size:22px;
+      line-height:1.75;
+    }
+
+    .story {
+      padding:130px 7% 110px;
+    }
+
+    .story-wrap {
+      max-width:1180px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:70px;
+      align-items:start;
+    }
+
+    .story-copy h2 {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(42px, 5vw, 72px);
+      line-height:1.05;
+      font-weight:600;
+      color:#24103f;
+      margin-bottom:26px;
+    }
+
+    .gold-line {
+      width:70px;
+      height:3px;
+      background:#d4af37;
+      margin:0 0 36px;
+      border-radius:999px;
+    }
+
+    .story-copy p {
+      color:#5c536c;
+      font-size:18px;
+      line-height:1.95;
+      margin-bottom:24px;
+    }
+
+    .story-copy .lead {
+      font-size:22px;
+      color:#32135f;
+      font-weight:500;
+    }
+
+    .mission-card {
+      background:linear-gradient(145deg,#24103f,#32135f);
+      color:white;
+      border-radius:36px;
+      padding:48px;
+      border:1px solid rgba(212,175,55,.45);
+      box-shadow:0 35px 90px rgba(36,16,63,.22);
+      position:sticky;
+      top:40px;
+    }
+
+    .mission-card .small {
+      color:#d4af37;
+      letter-spacing:2.5px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      margin-bottom:24px;
+    }
+
+    .mission-card h3 {
+      font-family:'Playfair Display', serif;
+      font-size:46px;
+      line-height:1.12;
+      font-weight:500;
+      margin-bottom:28px;
+    }
+
+    .mission-card p {
+      color:#f3eefc;
+      font-size:17px;
+      line-height:1.9;
+      margin-bottom:22px;
+    }
+
+    .signature {
+      margin-top:34px;
+      padding-top:28px;
+      border-top:1px solid rgba(212,175,55,.35);
+      font-family:'Playfair Display', serif;
+      color:#d4af37;
+      font-size:29px;
+      line-height:1.35;
+    }
+
+    .leaders {
+      background:#f4efff;
+      padding:105px 7%;
+    }
+
+    .leaders-header {
+      max-width:850px;
+      margin:0 auto 54px;
+      text-align:center;
+    }
+
+    .leaders-header h2 {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(38px, 5vw, 64px);
+      line-height:1.1;
+      color:#24103f;
+      margin-bottom:16px;
+    }
+
+    .leaders-header p {
+      color:#5c536c;
+      font-size:18px;
+      line-height:1.8;
+    }
+
+    .leader-grid {
+      max-width:1120px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .leader-card {
+      background:white;
+      border-radius:30px;
+      padding:38px;
+      border:1px solid #eee6d8;
+      box-shadow:0 22px 60px rgba(50,19,95,.10);
+    }
+
+    .role {
+      color:#8a6d1f;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:12px;
+    }
+
+    .leader-card h3 {
+      font-family:'Playfair Display', serif;
+      font-size:34px;
+      color:#24103f;
+      margin-bottom:16px;
+    }
+
+    .leader-card p {
+      color:#5c536c;
+      font-size:17px;
+      line-height:1.85;
+      margin-bottom:18px;
+    }
+
+    .values {
+      background:#16051f;
+      color:white;
+      padding:105px 7%;
+    }
+
+    .values-header {
+      text-align:center;
+      max-width:850px;
+      margin:0 auto 55px;
+    }
+
+    .values-header p {
+      color:#d4af37;
+      letter-spacing:3px;
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      margin-bottom:18px;
+    }
+
+    .values-header h2 {
+      font-family:'Playfair Display', serif;
+      font-size:clamp(38px, 5vw, 64px);
+      font-weight:500;
+    }
+
+    .value-grid {
+      max-width:1120px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:26px;
+    }
+
+    .value-card {
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(212,175,55,.25);
+      border-radius:28px;
+      padding:38px;
+    }
+
+    .value-card span {
+      color:#d4af37;
+      font-size:13px;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+
+    .value-card h3 {
+      font-family:'Playfair Display', serif;
+      color:#fff;
+      font-size:32px;
+      font-weight:500;
+      margin:16px 0;
+    }
+
+    .value-card p {
+      color:#eee8f7;
+      font-size:16px;
+      line-height:1.8;
+    }
+
+    .closing {
+      background:
+        radial-gradient(circle at 20% 60%, rgba(212,175,55,.13), transparent 28%),
+        #fbfaf7;
+      padding:115px 7%;
+      text-align:center;
+    }
+
+    .closing h2 {
+      font-family:'Playfair Display', serif;
+      color:#24103f;
+      font-size:clamp(42px, 6vw, 76px);
+      line-height:1.1;
+      font-weight:500;
+      max-width:950px;
+      margin:auto;
+    }
+
+    .closing span {
+      color:#b8860b;
+      font-style:italic;
+    }
+
+    @media(max-width:950px) {
+      nav {
+        flex-direction:column;
+        gap:18px;
+      }
+
+      .story-wrap,
+      .leader-grid,
+      .value-grid {
+        grid-template-columns:1fr;
+      }
+
+      .mission-card {
+        position:relative;
+        top:0;
+      }
+
+      .nav-links {
+        justify-content:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">
+    <img src="/logo.png" alt="Logan Pathway Logo">
+  </div>
+
+  <div class="nav-links">
+    <a href="/">HOME</a>
+    <a href="/story.html">OUR STORY</a>
+    <a href="/#services">SERVICES</a>
+    <a href="/#request-form">REQUEST SERVICES</a>
+    <a href="/#contact" class="contact-btn">CONTACT</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">OUR STORY</p>
+    <h1>Care with purpose.<br>Healing with heart.</h1>
+    <p class="hero-sub">
+      Logan Pathway to Hope & Healing was created to make care feel personal, intentional, and deeply connected to real change.
+    </p>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-wrap">
+    <div class="story-copy">
+      <h2>We believe healing should feel human.</h2>
+      <div class="gold-line"></div>
+
+      <p class="lead">
+        Logan Pathway was created from a deep belief that individuals and families deserve more than temporary solutions.
+      </p>
+
+      <p>
+        Too often, people enter services carrying trauma, stress, broken trust, uncertainty, and emotional heaviness without receiving the type of consistent support that helps them truly feel seen and understood.
+      </p>
+
+      <p>
+        We built Logan Pathway to be different. Our work is grounded in compassion, structure, emotional wellness, and the belief that healing begins when people feel safe enough to be honest and supported enough to grow.
+      </p>
+
+      <p>
+        Through outpatient therapy, group counseling, clinical assessments, and future program development, we are creating a pathway from survival to healing and from healing to purpose.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <p class="small">Our Why</p>
+      <h3>Hope.<br>Healing.<br>Stability.</h3>
+      <p>
+        These are more than words for us. They are the foundation of the care we provide and the future we are building.
+      </p>
+      <p>
+        We walk alongside individuals and families with structure, compassion, and a commitment to meaningful change.
+      </p>
+      <div class="signature">
+        From survival to healing.<br>
+        From healing to purpose.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="leaders">
+  <div class="leaders-header">
+    <p class="eyebrow">LEADERSHIP</p>
+    <h2>Two leaders. One shared mission.</h2>
+    <p>
+      Logan Pathway is led with clinical vision, community impact, and a commitment to care that reaches people in meaningful ways.
+    </p>
+  </div>
+
+  <div class="leader-grid">
+    <div class="leader-card">
+      <p class="role">Founder & Visionary</p>
+      <h3>Diashanna Logan</h3>
+      <p>
+        Diashanna Logan is the Founder and Visionary behind Logan Pathway to Hope & Healing. As a therapist, her work is grounded in trauma-informed care, emotional wellness, crisis intervention, and helping individuals build tools for real growth.
+      </p>
+      <p>
+        She supports individuals navigating anxiety, depression, trauma, family conflict, emotional regulation, life transitions, and stress. Her approach is structured, compassionate, honest, and empowering.
+      </p>
+      <p>
+        Diashanna believes healing work should create safety, restore confidence, and help people reconnect with purpose.
+      </p>
+    </div>
+
+    <div class="leader-card">
+      <p class="role">Co-Founder & Chief Impact Officer</p>
+      <h3>Amber Jones-Logan</h3>
+      <p>
+        Amber Jones-Logan serves as Co-Founder and Chief Impact Officer, helping shape the heart, direction, and community impact of Logan Pathway to Hope & Healing.
+      </p>
+      <p>
+        Her leadership strengthens the organization’s focus on connection, access, advocacy, partnerships, and meaningful outcomes.
+      </p>
+      <p>
+        Amber helps ensure the mission reaches the people who need it most and that every service reflects the purpose behind Logan Pathway.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="values-header">
+    <p>OUR FOUNDATION</p>
+    <h2>Hope. Healing. Stability.</h2>
+  </div>
+
+  <div class="value-grid">
+    <div class="value-card">
+      <span>01</span>
+      <h3>Hope</h3>
+      <p>
+        We create space for people to believe that change is possible and that tomorrow can look different.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <span>02</span>
+      <h3>Healing</h3>
+      <p>
+        We provide compassionate, evidence-based care that supports the whole person and honors their story.
+      </p>
+    </div>
+
+    <div class="value-card">
+      <span>03</span>
+      <h3>Stability</h3>
+      <p>
+        We help individuals and families build the tools, confidence, and structure needed for sustainable growth.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <h2>
+    Care that feels human.<br>
+    Healing that leads to <span>purpose.</span>
+  </h2>
+</section>
+
+</body>
+</html>
