@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logan Pathway to Hope & Healing | Outpatient Therapy Services</title>
+  <meta name="description" content="Outpatient therapy services offering individual therapy, group counseling, clinical assessments, and family support." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&family=Allura&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --purple-950:#16051f;
+      --purple-900:#230733;
+      --purple-800:#32104c;
+      --purple-700:#45176b;
+      --gold:#d7a93f;
+      --gold-2:#f0c66a;
+      --cream:#fbf7ee;
+      --cream-2:#f4ecdf;
+      --ink:#21152c;
+      --muted:#62566b;
+      --line:#e7d9c3;
+      --white:#fff;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--cream);}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1180px,92vw);margin:0 auto}
+    .nav{position:absolute;top:0;left:0;width:100%;z-index:10;padding:24px 0;color:white}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:28px}
+    .brand{display:flex;align-items:center;gap:14px;min-width:260px}
+    .brand img{width:88px;height:88px;object-fit:contain;filter:drop-shadow(0 10px 20px rgba(0,0,0,.35))}
+    .brand-title{font-family:'Playfair Display',serif;font-size:34px;line-height:.88;color:var(--gold-2);font-weight:800;letter-spacing:.2px}
+    .brand-sub{display:block;font-family:Inter,sans-serif;color:var(--gold);font-size:12px;letter-spacing:2.5px;font-weight:700;margin-top:8px;text-transform:uppercase;line-height:1.3}
+    .links{display:flex;align-items:center;gap:34px;font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.4px}
+    .links a:first-child{border-bottom:3px solid var(--gold);padding-bottom:8px}
+    .nav-cta{border:1.5px solid var(--gold);padding:15px 24px;color:var(--gold-2);font-weight:800;text-transform:uppercase;font-size:13px;letter-spacing:.5px;border-radius:2px}
+    .hero{min-height:760px;background:
+      radial-gradient(circle at 72% 42%, rgba(92,28,126,.46), transparent 36%),
+      linear-gradient(90deg, rgba(22,5,31,.98) 0%, rgba(25,5,39,.96) 48%, rgba(29,7,45,.94) 100%),
+      url('diashanna.jpg');
+      background-size:cover;background-position:center;position:relative;overflow:hidden;color:white;padding-top:130px;}
+    .hero:after{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg width='700' height='700' viewBox='0 0 700 700' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23d7a93f' stroke-opacity='.09' stroke-width='2'%3E%3Cpath d='M100 600c100-130 120-270 70-420'/%3E%3Cpath d='M150 590c100-120 145-260 130-420'/%3E%3Cpath d='M205 590c70-118 110-235 110-370'/%3E%3Cpath d='M560 560c-120-110-170-230-150-390'/%3E%3Cpath d='M500 590c-90-110-120-240-80-390'/%3E%3C/g%3E%3C/svg%3E");background-size:760px;background-repeat:no-repeat;background-position:right 40px top 70px;opacity:.9;pointer-events:none}
+    .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:.82fr 1.18fr;align-items:end;gap:34px;min-height:630px}
+    .hero-copy{align-self:center;padding-top:20px;padding-bottom:65px;max-width:520px}
+    .eyebrow{color:var(--gold);font-size:16px;letter-spacing:3px;font-weight:800;text-transform:uppercase;margin-bottom:20px}
+    h1{font-family:'Playfair Display',serif;font-size:58px;line-height:1.03;margin:0 0 22px;color:white;font-weight:800;letter-spacing:-.8px}
+    .accent{color:var(--gold-2)}
+    .rule{width:80px;height:3px;background:var(--gold);margin:24px 0}
+    .hero-copy p{font-size:17px;line-height:1.72;color:#fff;max-width:500px;margin:0}
+    .btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;gap:16px;padding:17px 25px;border-radius:2px;text-transform:uppercase;font-weight:900;font-size:13px;letter-spacing:.4px;transition:.25s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:linear-gradient(135deg,#c99528,#f3d27a);color:#180620;box-shadow:0 12px 30px rgba(215,169,63,.18)}
+    .btn-outline{border:1.5px solid var(--gold);color:white;background:rgba(255,255,255,.03)}
+    .founders-hero{align-self:end;display:grid;grid-template-columns:1fr .86fr;align-items:end;gap:22px;padding-top:70px}
+    .hero-founder{position:relative;text-align:center;min-height:560px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;border-radius:4px 4px 0 0}
+    .hero-founder:before{content:"";position:absolute;inset:auto 0 0;height:42%;background:linear-gradient(180deg,transparent,rgba(22,5,31,.96));z-index:2}
+    .hero-founder img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;filter:none;transform:none}
+    .hero-founder.diashanna img{object-position:center center}
+    .hero-founder.amber img{object-position:center 22%}
+    .founder-label{position:relative;z-index:3;padding:0 10px 34px;width:100%}
+    .signature{font-family:Allura,cursive;font-size:46px;color:var(--gold);line-height:1;text-shadow:0 4px 20px rgba(0,0,0,.45);white-space:nowrap}
+    .title{font-size:15px;line-height:1.45;color:white;text-transform:uppercase;font-weight:800;letter-spacing:.8px;margin-top:8px}
+    .service-section{background:linear-gradient(180deg,#fff,#fbf7ee);padding:26px 0 42px;border-bottom:1px solid var(--line)}
+    .section-kicker{text-align:center;color:#a9781d;font-weight:800;text-transform:uppercase;letter-spacing:2.3px;font-size:14px;margin-bottom:5px}
+    .section-title{text-align:center;font-family:'Playfair Display',serif;font-size:40px;line-height:1.15;color:#271437;margin:0 0 30px;font-weight:800}
+    .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .service-card{background:rgba(255,255,255,.9);border:1px solid #e5d4bc;border-radius:10px;padding:26px 22px 28px;text-align:center;box-shadow:0 18px 38px rgba(45,24,52,.07)}
+    .service-icon{width:72px;height:72px;background:radial-gradient(circle at 40% 35%,#4c156d,#1a0628);border-radius:50%;margin:0 auto 18px;display:grid;place-items:center;color:var(--gold);font-size:34px;border:1px solid #422056}
+    .service-card h3{font-size:16px;text-transform:uppercase;letter-spacing:.2px;margin:0 0 10px;color:#21152c}
+    .service-card p{margin:0;color:#1e1a24;line-height:1.55;font-size:14px}
+    .quote-band{background:linear-gradient(90deg,#210633,#3a0d5a,#210633);color:white;padding:32px 0;border-top:1px solid #5b2875;border-bottom:1px solid #5b2875}
+    .quote-inner{display:grid;grid-template-columns:80px 1fr 80px;align-items:center;text-align:center;gap:15px}
+    .quote-mark{font-family:'Playfair Display',serif;font-size:70px;color:var(--gold);line-height:.8}
+    .quote-text{font-family:'Playfair Display',serif;font-size:28px;line-height:1.18;color:white}.quote-text span{border-bottom:2px solid var(--gold);padding-bottom:6px}
+    .about{background:#fbf7ee;padding:48px 0 45px}.about-grid{display:grid;grid-template-columns:1fr 1.12fr;gap:46px;align-items:center}.about-copy{position:relative;padding-left:56px}.about-copy:before{content:"";position:absolute;left:0;top:4px;width:1px;height:86%;background:var(--line)}
+    .about-copy .mini{color:#a9781d;font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px}.about h2{font-family:'Playfair Display',serif;font-size:34px;line-height:1;margin:9px 0 12px;color:#261034}.about p{font-size:15px;line-height:1.75;color:#21152c;margin:0 0 17px}.small-rule{width:52px;height:2px;background:var(--gold);margin:0 0 20px}
+    .founder-mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.mini-card{text-align:center}.mini-card img{width:100%;height:230px;object-fit:cover;border-radius:10px;display:block;border:1px solid #e3d4bd;box-shadow:0 14px 32px rgba(34,18,40,.12);filter:none}.mini-card:first-child img{object-position:center center}.mini-card:nth-child(2) img{object-position:center 20%}.mini-card h3{font-family:'Playfair Display',serif;font-size:23px;line-height:1.1;margin:13px 0 4px;color:#261034}.mini-card p{font-size:13px;line-height:1.2;text-transform:uppercase;font-weight:800;letter-spacing:.6px;margin:0;color:#251232}
+    .cta-strip{background:linear-gradient(90deg,#210633,#35104d,#210633);color:white;padding:34px 0}.cta-grid{display:grid;grid-template-columns:1.1fr repeat(3,.66fr);gap:25px;align-items:center}.cta-title{font-family:'Playfair Display',serif;font-size:30px;line-height:1.12;margin:0 0 7px;color:white}.cta-lead{margin:0;color:#f8edf9;line-height:1.5}.cta-action{text-align:center;border-left:1px solid rgba(215,169,63,.4);min-height:90px;display:grid;place-items:center}.round-icon{width:64px;height:64px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:0 auto 10px;color:var(--gold);font-size:28px}.cta-action span{font-size:13px;font-weight:900;text-transform:uppercase;color:white}
+    footer{background:#120318;color:white;padding:30px 0 18px}.footer-grid{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:32px;align-items:center}.footer-brand{display:flex;align-items:center;gap:12px}.footer-brand img{width:86px;height:86px;object-fit:contain}.footer-brand .brand-title{font-size:32px}.contact-lines{display:grid;gap:12px;color:white}.contact-lines a{display:flex;gap:12px;align-items:center;color:white}.gold-text{color:var(--gold)}.footer-note{line-height:1.6;color:#f1e9f3}.socials{display:flex;gap:12px;margin-top:12px}.socials span{width:32px;height:32px;border-radius:50%;background:var(--gold);color:#1b0625;display:grid;place-items:center;font-weight:900}.copyright{border-top:1px solid rgba(215,169,63,.25);margin-top:24px;padding-top:15px;text-align:center;color:#d8cddd;font-size:13px}.copyright span{color:var(--gold)}
+    @media(max-width:1040px){.links{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:120px}.hero-copy{padding-bottom:10px}.founders-hero{grid-template-columns:1fr 1fr}.hero-founder{min-height:430px}.service-grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.cta-grid{grid-template-columns:1fr}.cta-action{border-left:none;border-top:1px solid rgba(215,169,63,.4);padding-top:24px}.footer-grid{grid-template-columns:1fr}}
+    @media(max-width:660px){.brand img{width:58px;height:58px}.brand-title{font-size:25px}.nav-cta{display:none}.hero{padding-top:105px}.founders-hero{grid-template-columns:1fr}.hero-founder{min-height:440px}.hero-founder.amber{min-height:420px}h1{font-size:43px}.hero-copy p{font-size:16px}.service-grid{grid-template-columns:1fr}.quote-inner{grid-template-columns:1fr}.quote-mark{display:none}.quote-text{font-size:24px}.about-copy{padding-left:0}.about-copy:before{display:none}.founder-mini-grid{grid-template-columns:1fr}.footer-brand img{width:70px;height:70px}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#home" aria-label="Logan Pathway to Hope and Healing home">
+        <img src="logo.png" alt="Logan Pathway to Hope and Healing logo" />
+        <div><div class="brand-title">Logan</div><span class="brand-sub">Pathway to Hope<br>and Healing</span></div>
+      </a>
+      <nav class="links" aria-label="Main navigation">
+        <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#team">Team</a><a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="mailto:info@loganpathway.org?subject=Request%20Appointment">Request Appointment</a>
+    </div>
+  </header>
+
+  <main id="home" class="hero">
+    <div class="wrap hero-grid">
+      <section class="hero-copy" aria-label="Outpatient therapy hero">
+        <div class="eyebrow">Outpatient Therapy Services</div>
+        <h1>Healing in a space that meets you where you are.</h1>
+        <div class="rule"></div>
+        <p>Individual therapy, group counseling, and clinical assessments designed to support emotional wellness, growth, and stability—on your journey, at your pace.</p>
+        <div class="btns"><a class="btn btn-gold" href="#services">Start Services <span>→</span></a><a class="btn btn-outline" href="mailto:info@loganpathway.org?subject=Request%20Appointment">Request Appointment</a></div>
+      </section>
+      <section class="founders-hero" aria-label="Founders">
+        <article class="hero-founder diashanna"><img src="diashanna.jpg" alt="Diashanna Logan"><div class="founder-label"><div class="signature">Diashanna Logan</div><div class="title">Founder &<br>Program Visionary</div></div></article>
+        <article class="hero-founder amber"><img src="amber.jpg" alt="Amber Jones-Logan"><div class="founder-label"><div class="signature">Amber Jones-Logan</div><div class="title">Co-Founder &<br>Chief Impact Officer</div></div></article>
+      </section>
+    </div>
+  </main>
+
+  <section class="service-section" id="services">
+    <div class="wrap"><div class="section-kicker">Our Services</div><h2 class="section-title">Support. Growth. Healing.</h2>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-icon">♙</div><h3>Individual Therapy</h3><p>Personalized support for anxiety, depression, trauma, life stress, and emotional regulation.</p></article>
+        <article class="service-card"><div class="service-icon">♚</div><h3>Group Counseling</h3><p>Structured group sessions focused on connection, skill-building, and shared healing.</p></article>
+        <article class="service-card"><div class="service-icon">☷</div><h3>Clinical Assessments</h3><p>Comprehensive evaluations to guide treatment planning and identify support needs.</p></article>
+        <article class="service-card"><div class="service-icon">⌂</div><h3>Family Support</h3><p>Strengthening communication, boundaries, and family dynamics for lasting positive change.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-band"><div class="wrap quote-inner"><div class="quote-mark">“</div><div class="quote-text">Healing doesn’t mean the damage never existed.<br><span>It means the damage no longer controls the story.</span></div><div class="quote-mark">”</div></div></section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-copy"><div class="mini">About Us</div><h2>Healing is possible.</h2><div class="small-rule"></div><p>Our outpatient therapy services provide a safe, supportive, and confidential space for individuals and families to work through life’s challenges and build healthier, more fulfilling lives.</p><p>We use evidence-based approaches tailored to your unique needs to help you heal, grow, and thrive.</p><a class="btn btn-gold" href="mailto:info@loganpathway.org?subject=Learn%20More%20About%20Services">Learn More About Us</a></div>
+      <div id="team"><div class="mini" style="color:#a9781d;font-weight:800;text-transform:uppercase;letter-spacing:2px;font-size:13px;margin-bottom:14px">Meet Our Founders</div><div class="founder-mini-grid"><article class="mini-card"><img src="diashanna.jpg" alt="Diashanna Logan"><h3>Diashanna Logan</h3><p>Founder & Program Visionary</p></article><article class="mini-card"><img src="amber.jpg" alt="Amber Jones-Logan"><h3>Amber Jones-Logan</h3><p>Co-Founder & Chief Impact Officer</p></article></div></div>
+    </div>
+  </section>
+
+  <section class="cta-strip" id="contact"><div class="wrap cta-grid"><div><h2 class="cta-title">Ready to take the next step?</h2><p class="cta-lead">We’re here to support you on your journey to healing and wellness.</p></div><a class="cta-action" href="mailto:info@loganpathway.org?subject=Request%20Services"><div><div class="round-icon">▣</div><span>Request Services</span></div></a><a class="cta-action" href="mailto:info@loganpathway.org?subject=Referral"><div><div class="round-icon">▰</div><span>Send Referral</span></div></a><a class="cta-action" href="mailto:info@loganpathway.org"><div><div class="round-icon">☎</div><span>Contact Us</span></div></a></div></section>
+  <footer><div class="wrap footer-grid"><div class="footer-brand"><img src="logo.png" alt="Logan Pathway logo"><div><div class="brand-title">Logan</div><span class="brand-sub">Pathway to Hope<br>and Healing</span></div></div><div class="contact-lines"><a href="mailto:info@loganpathway.org"><span class="gold-text">✉</span> info@loganpathway.org</a><a href="tel:4044288102"><span class="gold-text">☎</span> (404) 428-8102</a></div><div class="footer-note">Serving individuals, families, and our community with compassion and care.<div class="socials"><span>f</span><span>◎</span><span>in</span></div></div></div><div class="wrap copyright">© 2026 Logan Pathway to Hope & Healing &nbsp; | &nbsp; <span>Hope. Healing. Stability. Growth.</span></div></footer>
+</body>
+</html>
